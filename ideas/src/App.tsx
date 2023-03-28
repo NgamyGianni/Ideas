@@ -42,7 +42,7 @@ const App = ()  => {
         <button onClick={(e) => {submitIdea(); setCurrentInput("")}}>Post !</button>
       </div>
       <h1 style={{marginTop: "40%"}}>Ideas : </h1>
-      {ideas.map((idea : string) => <p style={{fontFamily: "times", fontSize: "30px"}}>- {idea}</p>)}
+      {ideas.map((idea : string) => <p style={{fontSize: "30px"}}>- {idea}</p>)}
     </div>
   )
 }
