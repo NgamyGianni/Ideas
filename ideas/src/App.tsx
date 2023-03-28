@@ -13,12 +13,12 @@ const App = ()  => {
       .select('*')
 
     if(error) location.reload()
-    setIdeas(dataToIdeas(data))
+    if (data !== null) setIdeas(dataToIdeas(data))
 
     return data;
   }
 
-  const dataToIdeas = (data : object) : Array<string> => data.map((e) => e.idea)
+  const dataToIdeas = (data : Array<{id: number, created_at: string, idea: string}>) : Array<string> => data.map((e : any) => e.idea)
 
   const submitIdea = async () => {
     if(currentInput !== "") {
