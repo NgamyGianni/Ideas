@@ -31,8 +31,10 @@ const App = ()  => {
   }
 
   useEffect(() => {
-    fetchIdeas()
-  }, [fetchIdeas])
+    const interval = setInterval(() => fetchIdeas(), 3000)
+
+    return () => clearInterval(interval);
+  }, [])
 
   return (
     <div>
