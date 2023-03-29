@@ -18,7 +18,7 @@ const App = ()  => {
     return data;
   }
 
-  const dataToIdeas = (data : Array<{id: number, created_at: string, idea: string}>) : Array<string> => data.map((e : any) => e.idea)
+  const dataToIdeas = (data : Array<{id: number, created_at: string, idea: string} | any>) : Array<string> => data.map((e : any) => e.idea)
 
   const submitIdea = async () => {
     if(currentInput !== "") {
